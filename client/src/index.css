@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+/* define your theme overrides with CSS custom properties */
+@layer base {
+  @theme {
+    /* font family */
+    --font-outfit: 'Outfit', sans-serif;
+
+    /* custom text sizes: name, value, and other metrics */
+    --text-course-details-heading-small: 26px;
+    --text-course-details-heading-small--leading: 36px;
+
+    --text-course-details-heading-large: 36px;
+    --text-course-details-heading-large--leading: 44px;
+
+    --text-home-heading-small: 45px;
+    --text-home-heading-small--leading: 34px;
+
+    --text-home-heading-large: 48px;
+    --text-home-heading-large--leading: 56px;
+
+    --text-default: 15px;
+    --text-default--leading: 21px;
+  }
+
+  /* global base or body styling */
+  body {
+    font-family: var(--font-outfit);
+  }
+}
+
+/* then you can make utility classes mapping to those variables */
+@layer utilities {
+  .text-course-details-heading-small {
+    font-size: var(--text-course-details-heading-small);
+    line-height: var(--text-course-details-heading-small--leading);
+  }
+  .text-course-details-heading-large {
+    font-size: var(--text-course-details-heading-large);
+    line-height: var(--text-course-details-heading-large--leading);
+  }
+  .text-home-heading-small {
+    font-size: var(--text-home-heading-small);
+    line-height: var(--text-home-heading-small--leading);
+  }
+  .text-home-heading-large {
+    font-size: var(--text-home-heading-large);
+    line-height: var(--text-home-heading-large--leading);
+  }
+  .text-default {
+    font-size: var(--text-default);
+    line-height: var(--text-default--leading);
+  }
+
+  /* custom grid template columns */
+  .grid-cols-auto {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+*{
+    font-family: "Outfit", sans-serif;
+}
+
+.rich-text {
+  font-size: 15px;
+  color: #7A7B7D;
+}
+
+.rich-text p {
+  margin-bottom: 16px;
+}
+
+.rich-text h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #252525;
+  margin: 32px 0;
+}
+
+.rich-text h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #252525;
+  margin: 24px 0;
+}
+
+.rich-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin: 20px 0;
+}
+
+.rich-text h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #444444;
+  margin: 12px 0;
+}
+
